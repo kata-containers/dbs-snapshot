@@ -1,10 +1,16 @@
 [package]
-name = "snapshot"
-version = "0.1.0"
-authors = ["Amazon Firecracker team <firecracker-devel@amazon.com>"]
+name = "dbs-snapshot"
+version = "1.5.0"
+authors = [
+    "Amazon Firecracker team <firecracker-devel@amazon.com>",
+    "Kata Containers Developers",
+]
 edition = "2021"
 autobenches = false
 license = "Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/kata-containers/dbs-snapshot"
+homepage = "https://github.com/kata-containers/dbs-snapshot"
 
 [lib]
 bench = false
