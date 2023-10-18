@@ -1,14 +1,24 @@
-[workspace]
-members = ["src/cpu-template-helper", "src/firecracker", "src/jailer", "src/rebase-snap", "src/seccompiler", "src/snapshot-editor"]
-default-members = ["src/firecracker"]
-resolver = "2"
+[package]
+name = "snapshot"
+version = "0.1.0"
+authors = ["Amazon Firecracker team <firecracker-devel@amazon.com>"]
+edition = "2021"
+autobenches = false
+license = "Apache-2.0"
 
-[profile.dev]
-panic = "abort"
+[lib]
+bench = false
 
-[profile.release]
-panic = "abort"
-lto = true
+[dependencies]
+libc = "0.2.117"
+versionize = "0.1.10"
+versionize_derive = "0.1.5"
+thiserror = "1.0.32"
+displaydoc = "0.2.4"
 
-[patch.crates-io]
-kvm-bindings = { git = "https://github.com/firecracker-microvm/kvm-bindings", tag = "v0.6.0-2", features = ["fam-wrappers"] }
+[dev-dependencies]
+criterion = { version = "0.5.0", default-features = false }
+
+[[bench]]
+name = "version_map"
+harness = false
