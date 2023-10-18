@@ -1,5 +1,6 @@
 /build/
 /.kernel/
+/Cargo.lock
 target
 *.rs.bk
 *.iml
