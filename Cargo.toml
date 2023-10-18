@@ -1,6 +1,6 @@
 [package]
 name = "snapshot"
-version = "0.1.0"
+version = "1.5.0"
 authors = ["Amazon Firecracker team <firecracker-devel@amazon.com>"]
 edition = "2021"
 autobenches = false
