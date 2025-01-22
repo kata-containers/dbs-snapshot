@@ -22,8 +22,8 @@
 //! Each structure, union or enum is versioned separately and only needs to increment their version
 //! if a field is added or removed. For each state snapshot we define 2 versions:
 //!  - **the format version** which refers to the SnapshotHdr, CRC, or the representation of
-//! primitives types (currently we use versionize that uses serde bincode as a backend). The current
-//! implementation does not have any logic dependent on it.
+//!    primitives types (currently we use versionize that uses serde bincode as a backend). The current
+//!    implementation does not have any logic dependent on it.
 //!  - **the data version** which refers to the state.
 mod persist;
 use std::fmt::Debug;
